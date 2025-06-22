@@ -13,6 +13,8 @@ cd clairity
 ```bash
 pkg install yarn
 yarn
+or
+npm install
 ```
 
 Run
