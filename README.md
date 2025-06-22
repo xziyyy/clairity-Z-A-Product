@@ -43,4 +43,10 @@ ID: disana kalian bisa mengubah number owner dan nama bot
 EN: there you can change the owner number and bot name
 ```
 
+edit Menu List in ./media/settings/menu.js
+```bash
+ID: disana kalian bisa mengubah menu list dan button menu
+EN: there you can change the menu list and menu buttons
+```
+
 License: [MIT](https://choosealicense.com/licenses/mit/)
