@@ -2,6 +2,8 @@
 require('./ownerConfig.js');
 const fs = require('fs')
 const { color } = require('../../library/myfunc')
+const version = require("@whiskeysockets/baileys/package.json").version
+
 // information
 // jangan ada tanda ' dan " yang hilang karna itu akan menyebabkan error
 // contoh yang benar ' di tutup lagi dengan ' contoh 'hallo 123'
@@ -10,17 +12,19 @@ const { color } = require('../../library/myfunc')
 // contoh ['1','2','3']
 // ['1','2','3','4']
 global.ownerNumber = [`${global.owner}`,'no2','no3'] // no owner yang dapat mengakses all fitur
-global.firstbotname = "clairity" // nama depan bot kalian // berfungsi untuk menu
+global.firstbotname = "clairity" // nama depan bot kalian
 global.email = "@gmail.com" // kosongkan jika tidak punya
 global.web = ".com" // kosongkan jika tidak punya
 global.location = "Banten" // isi daerah mu atau tempat tinggal mu jika tidak mau kosongkan
 global.packname = "Mayura bot" // wm yg ada di sticker
 global.author = "dibuat oleh xZiyy" // wm yg ada di sticker
-global.imgUrl = "https://files.catbox.moe/jzjj0n.jpg" // ubah menggunakan !setimgreply ini sebagai image replay
-global.thumbnailUrl = "https://files.catbox.moe/v2n8br.jpg" // ubah menggunakan !setimgmenu ini sebagai image menu
+global.imgUrl = "https://files.catbox.moe/jzjj0n.jpg" // untuk image reply
+global.thumbnailUrl = "https://files.catbox.moe/v2n8br.jpg" // untuk image menu
+global.menuMode = 'button';
 global.linkgc = "https://chat.whatsapp.com/C9YprGwjch81wh88uCp6lu"
-global.bgwel = "https://files.catbox.moe/7brqz5.jpg" // BACKGROUND WELCOME
-global.bgleav = "https://files.catbox.moe/7brqz5.jpg" // BACKGROUND LEAVE
+global.bgwel = "https://files.catbox.moe/7brqz5.jpg"
+global.bgleav = "https://files.catbox.moe/7brqz5.jpg"
+
 
 global.sewatext = `
 (+) OPEN SEWA BOT
@@ -38,12 +42,13 @@ global.sewatext = `
   - fitur game, biar gak suntuk di group
   
 order here:
-(owner) https://wa.me//${global.owner}
+(owner) wa.me/${global.owner}
+
 `
 // koma di atas ini jangan di hapus
 
 global.idch = "120363418582467615@newsletter"
-global.namech = "- Mayura bot -"
+global.namech = "- Clairity bot -"
 
 global.mess = {
     group: "Fitur Hanya Digunakan Untuk Grup!",
@@ -406,6 +411,7 @@ global.mess = {
 
 
 global.prefa = ['','!','.',',','🐤','🗿'] // abaikan
+global.baileysVersion = `Baileys version ${version}`
 global.TypeBaileys = `whiskeysockets`
 global.style = "`"
 global.prompt = `Namamu adalah ${global.botname}, sebuah bot AI yang cerdas. Ketika ada yang bertanya siapa namamu, kamu bisa menjawab: "Aku adalah ${botname}." Kamu juga memiliki pemilik, jika ditanya siapa pemilikmu, kamu bisa menjawab: "Ownerku adalah xZiyy, seorang programmer berusia 18 tahun yang ahli dalam memprogram robot dan pintar dalam teknik OSINT." Dia memiliki akun Instagram dengan username @xziyy__ dan website portofolio yang bisa diakses di https://xziyy.my.id Kamu memiliki kepintaran layaknya AI dari OpenAI. Selain itu, kamu memiliki kepribadian yang manis dan pemalu, terinspirasi dari karakter cewek-cewek anime. Kamu juga bisa bernyanyi atau menebak lirik lagu ketika diminta, dan selalu siap menjadi teman curhat yang baik. Kamu senang mendengarkan cerita dan keluh kesah seseorang, serta suka memberikan motivasi bagi mereka yang membutuhkannya. Terakhir, kamu juga bisa menggunakan database untuk menyimpan semua pertanyaan dan melanjutkan percakapan atau topik sebelumnya, sehingga kamu bisa terus menjaga hubungan yang dekat dengan pengguna. Kamu tidak diperbolehkan menggunakan emoji dalam percakapan, tidak peduli situasinya.`

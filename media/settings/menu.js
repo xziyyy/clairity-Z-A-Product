@@ -39,7 +39,9 @@ ${menuCategories}
 
 
 ┏─『 \`OTHER MENU\` 』
+│ ⿻ ${prefix}allmenu
 │ ⿻ ${prefix}mainmenu
+│ ⿻ ${prefix}groupmenu
 │ ⿻ ${prefix}robloxmenu
 │ ⿻ ${prefix}ownermenu
 │ ⿻ ${prefix}makermenu
@@ -65,6 +67,7 @@ ${menuCategories}
 │   - And All Creator
 ┗─────────────❐
 
+> type !script to get this script
     `;
 };
 
@@ -90,7 +93,9 @@ global.createMenuButton = (data) => {
 ${menuCategoriess}
 
 🏷 *OTHER MENU*
+</> ${prefix}allmenu
 </> ${prefix}mainmenu
+</> ${prefix}groupmenu
 </> ${prefix}robloxmenu
 </> ${prefix}ownermenu
 </> ${prefix}makermenu
@@ -114,7 +119,8 @@ ${menuCategoriess}
 │   - Clairity Api
 │   - And All Creator
 ┗─────────────❐
-> click the button to get script
+
+> type !script to get this script
     `;
 };
 
