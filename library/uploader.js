@@ -4,6 +4,19 @@ const cheerio = require('cheerio');
 const fetch = require('node-fetch');
 const FormData = require('form-data');
 const { fromBuffer } = require('file-type');
+const { exec } = require('child_process');
+const util = require('util');
+
+const execAsync = util.promisify(exec);
+
+async function uploadCatbox(filePath) {
+  try {
+    const { stdout } = await execAsync(`curl -F "reqtype=fileupload" -F "userhash=" -F "fileToUpload=@${filePath}" https://catbox.moe/user/api.php`);
+    return stdout.trim();
+  } catch (error) {
+    throw error;
+  }
+}
 
 async function TelegraPh(buffer) {
 	return new Promise (async (resolve, reject) => {
@@ -81,4 +94,4 @@ async function webp2mp4File(path) {
 	})
 }
 
-module.exports = { TelegraPh, UguuSe, webp2mp4File }
+module.exports = { uploadCatbox, TelegraPh, UguuSe, webp2mp4File }
