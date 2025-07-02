@@ -12,12 +12,11 @@ module.exports = {
         }
 
         const clairityApi = `https://brat.caliphdev.com/api/brat?text=${encodeURIComponent(q.trim())}`;
-        const siputApi = `https://clairity-nine.vercel.app/api/brat?text=${encodeURIComponent(q.trim())}`;
+        const siputApi = `https://clairity.dpdns.org/api/brat?text=tes${encodeURIComponent(q.trim())}`;
 
        reply('_Tunggu sebentar, sedang memproses..._')
         
         try {
-            // Coba akses API Clairity
             const response = await axios.get(clairityApi, { responseType: 'arraybuffer' });
             await fuzzy.sendImageAsSticker(m.chat, response.data, m, {
                 packname: global.packname,
@@ -26,7 +25,6 @@ module.exports = {
         } catch (error) {
             console.error('API Clairity error, mencoba API Siput:', error.message);
             try {
-                // Jika Clairity gagal, coba akses API Siput
                 const response = await axios.get(siputApi, { responseType: 'arraybuffer' });
                 await fuzzy.sendImageAsSticker(m.chat, response.data, m, {
                     packname: global.packname,
@@ -38,7 +36,7 @@ module.exports = {
             }
         }
 
-    }, // END
+    },
 };
 
 const file = __filename;
