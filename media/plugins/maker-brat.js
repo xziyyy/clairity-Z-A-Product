@@ -12,7 +12,7 @@ module.exports = {
         }
 
         const clairityApi = `https://brat.caliphdev.com/api/brat?text=${encodeURIComponent(q.trim())}`;
-        const siputApi = `https://clairity.dpdns.org/api/brat?text=tes${encodeURIComponent(q.trim())}`;
+        const siputApi = `https://clairity.dpdns.org/api/brat?text=${encodeURIComponent(q.trim())}`;
 
        reply('_Tunggu sebentar, sedang memproses..._')
         
