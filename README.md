@@ -6,7 +6,7 @@ pkg install git -y
 pkg install nodejs-lts
 pkg install ffmpeg -y
 git clone https://github.com/xziyyy/clairity-Z-A-Product.git
-cd clairity
+cd clairity-Z-A-Product
 ```
 
 [RECOMMENDED INSTALL ON TERMUX]
